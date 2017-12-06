@@ -8,7 +8,7 @@ new Vue({
 		punch:function(){
 			this.health -=10;
 			if(this.health <= 0){
-				end=true;
+				this.end=true;
 			}
 		},
 		restart:function(){

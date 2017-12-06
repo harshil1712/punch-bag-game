@@ -8,13 +8,13 @@
 </head>
 <body>
 	<div id="vue-app">
-		<div id="bag"></div>
+		<div id="bag" v-bind:class="{burst:end}"></div>
 		<div id="bag-health">
-			<div></div>
+			<div v-bind:style='{width: health+"%"}'></div>
 		</div>
 		<div id="controls">
-			<button>Punch</button>
-			<button>Restart</button>
+			<button v-on:click='punch' v-show='!end'>Punch</button>
+			<button v-on:click='restart'>Restart</button>
 		</div>
 	</div>
 	<script src="app.js"></script>
